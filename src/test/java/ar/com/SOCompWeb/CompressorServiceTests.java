@@ -46,12 +46,12 @@ public class CompressorServiceTests {
 	}
 
 	@Test(expected = CompressionException.class)
-	public void testExceptionOnlyLetters() {
-		assertEquals("3A2B", compressorService.compress(new SOText("aaabb")).getCompressed());
-		assertEquals("5A", compressorService.compress(new SOText("AAA1AA")).getCompressed());
-		assertEquals("3A2B5A3B8C5A", compressorService.compress(new SOText("%%%%")).getCompressed());
-		assertEquals("3A2B5A3B8C5A", compressorService.compress(new SOText("  ")).getCompressed());
-		assertEquals("3A2B5A3B8C5A", compressorService.compress(new SOText("")).getCompressed());
+	public void testException() {
+		compressorService.compress(new SOText("aaabb")).getCompressed();
+		compressorService.compress(new SOText("AAA1AA")).getCompressed();
+		compressorService.compress(new SOText("%%%%")).getCompressed();
+		compressorService.compress(new SOText("  ")).getCompressed();
+		compressorService.compress(new SOText("")).getCompressed();
 	}
 
 }
