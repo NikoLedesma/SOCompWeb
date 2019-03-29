@@ -2,4 +2,4 @@
 
 URL DE LA API
   
-  https://evening-heroku-so.herokuapp.com/compress/
+  https://evening-heroku-so.herokuapp.com
